@@ -96,10 +96,10 @@ SSDECAY_NEST_PERCENT_CHANCE 1
 SSDECAY_LIGHT_FLICKER_PERCENT_CHANCE 10
 
 ## Disables any ERP preferences for codebases that don't want it.
-#DISABLE_ERP_PREFERENCES
-#DISABLE_TUMS_PREFERENCES
-#DISABLE_LEWD_ITEMS
-#ERP_EMOTES_TO_DISABLE cum
+DISABLE_ERP_PREFERENCES
+DISABLE_TUMS_PREFERENCES
+DISABLE_LEWD_ITEMS
+ERP_EMOTES_TO_DISABLE cum
 
 ## Disables mismatched parts for codebases that don't want it.
 #DISABLE_MISMATCHED_PARTS
@@ -170,10 +170,10 @@ NOVA_STAR_LEGACY_SYSTEM
 ARRIVALS_WAIT 150
 
 ## Uncomment to completely disable the antag opt-in system, which is a system that forces objectives to only roll on individuals who consent to it.
-#DISABLE_ANTAG_OPT_IN_PREFERENCES
+DISABLE_ANTAG_OPT_IN_PREFERENCES
 
 ## Uncomment to completely disable the conflict opt-in system, which provides a preference on inspect to indicate someones willingness to engage with hostilities
-#DISABLE_CONFLICT_OPT_IN_PREFERENCES
+DISABLE_CONFLICT_OPT_IN_PREFERENCES
 
 ## Uncomment to enable the replacing of flashbangs in secbelts with energy bolas
 REPLACE_SECBELT_FLASHBANGS_WITH_BOLA
