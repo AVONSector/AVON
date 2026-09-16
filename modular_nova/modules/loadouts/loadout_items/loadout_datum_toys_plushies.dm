@@ -1,5 +1,6 @@
 // LOADOUT ITEM DATUMS FOR /datum/loadout_item/toys/plush SUBTYPES ONLY
 
+/*
 /datum/loadout_item/toys/plush
 	group = "Plushies"
 	abstract_type = /datum/loadout_item/toys/plush
@@ -320,3 +321,4 @@
 /datum/loadout_item/toys/plush/plush_skaag
 	name = "Skaag Plushie"
 	item_path = /obj/item/toy/plush/nova/skaag
+*/

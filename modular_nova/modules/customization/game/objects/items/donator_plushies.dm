@@ -5,7 +5,7 @@
 * Please contact Golden if you want your plushie(s) usable on maps.
 */
 
-
+/*
 // Donation reward for tobjv
 /obj/item/toy/plush/nova/donator/tesh
 	name = "Squish-Me-Tesh"
@@ -1015,3 +1015,4 @@
 	squeak_override = list(
 		'modular_nova/modules/emotes/sound/voice/slime_pop.ogg' = 1,
 	)
+*/
