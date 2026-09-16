@@ -55,7 +55,6 @@
 
 	// These verbs are overridden below but they're not hidden by default. hide them from the verb panel too
 	remove_verb(src, /mob/living/verb/subtle)
-	remove_verb(src, /mob/living/verb/subtler)
 	remove_verb(src, /mob/verb/whisper_verb)
 	remove_verb(src, /mob/living/verb/container_emote)
 
@@ -159,9 +158,6 @@ GAME_VERB(/mob/living/soulcatcher_soul, leave_soulcatcher, "Leave Soulcatcher", 
 	return TRUE
 
 /mob/living/soulcatcher_soul/subtle()
-	return FALSE
-
-/mob/living/soulcatcher_soul/subtler()
 	return FALSE
 
 /mob/living/soulcatcher_soul/whisper_verb()
