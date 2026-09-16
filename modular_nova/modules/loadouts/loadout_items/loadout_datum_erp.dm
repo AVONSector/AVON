@@ -1,4 +1,4 @@
-/datum/loadout_category/erp
+/*/datum/loadout_category/erp
 	category_name = "Erotic"
 	category_ui_icon = FA_ICON_HEART
 	erp_category = TRUE
@@ -304,3 +304,4 @@
 /datum/loadout_item/erp/pentacamphor_neuroware_box
 	name = "Neuroware Chips Box (Nobido Xtreme)"
 	item_path = /obj/item/storage/box/flat/neuroware/pentacamphor
+*/
