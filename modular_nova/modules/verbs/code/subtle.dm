@@ -89,7 +89,7 @@
 	key = "subtler"
 	key_third_person = "subtler"
 	message = null
-	mob_type_blacklist_typecache = list(/mob/living/brain)
+	mob_type_blacklist_typecache = list(/mob/living/) // we don't want subtler, easy way to get rid of it
 
 /datum/emote/living/subtler/run_emote(mob/user, params, type_override, intentional)
 	if(!can_run_emote(user))
@@ -224,11 +224,11 @@ GAME_VERB(/mob/living, subtle, "Subtle", "IC")
 *	VERB CODE 2
 */
 
-GAME_VERB(/mob/living, subtler, "Subtler Anti-Ghost", "IC")
+/*GAME_VERB(/mob/living, subtler, "Subtler Anti-Ghost", "IC")
 	if(GLOB.say_disabled)	// This is here to try to identify lag problems
 		to_chat(usr, span_danger("Speech is currently admin-disabled."))
 		return
-	usr.emote("subtler")
+	usr.emote("subtler")*/
 
 #undef SUBTLE_DEFAULT_DISTANCE
 #undef SUBTLE_ONE_TILE
