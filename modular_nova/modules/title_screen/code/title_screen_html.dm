@@ -1,4 +1,3 @@
-
 GLOBAL_LIST_EMPTY(startup_messages)
 // FOR MOR INFO ON HTML CUSTOMISATION, SEE: https://github.com/Skyrat-SS13/Skyrat-tg/pull/4783
 
@@ -88,7 +87,7 @@ GLOBAL_LIST_EMPTY(startup_messages)
 		"}
 
 	else
-		dat += {"<img src="loading_screen.gif" class="bg" alt="">"}
+		//dat += {"<img src="loading_screen.gif" class="bg" alt="">"}
 
 		if(SStitle.current_notice)
 			dat += {"
@@ -97,7 +96,13 @@ GLOBAL_LIST_EMPTY(startup_messages)
 			</div>
 		"}
 
-		dat += {"<div class="container_nav">"}
+		dat += {"
+			<div class="panels" id="avonPanels">
+				<div class="panel-tags">
+					<div class="wordmark-top">AVON</div>
+					<div class="panel-buttons">"}
+
+		//dat += {"<div class="container_nav">"}
 
 		if(!SSticker || SSticker.current_state <= GAME_STATE_PREGAME)
 			dat += {"<a id="ready" class="menu_button" href='byond://?src=[text_ref(src)];toggle_ready=1'>[ready == PLAYER_READY_TO_PLAY ? "<span class='checked'>☑</span> READY" : "<span class='unchecked'>☒</span> READY"]</a>"}
@@ -117,8 +122,21 @@ GLOBAL_LIST_EMPTY(startup_messages)
 			<a id="be_antag" class="menu_button" href='byond://?src=[text_ref(src)];toggle_antag=1'>[client.prefs.read_preference(/datum/preference/toggle/be_antag) ? "<span class='checked'>☑</span> BE ANTAGONIST" : "<span class='unchecked'>☒</span> BE ANTAGONIST"]</a>
 			<span class="menu_button info_display">LATEJOIN QUEUE: [SStitle.get_latejoin_queue_count()]</span>
 			<hr>
-			<a class="menu_button" href='byond://?src=[text_ref(src)];server_swap=1'>SWAP SERVERS</a>
+			<!--<a class="menu_button" href='byond://?src=[text_ref(src)];server_swap=1'>SWAP SERVERS</a>-->
 		"}
+
+		dat += {"</div>
+					<img src="avon_kitty.png" class="cat-glyph" alt="">
+					<div class="tags">
+						Online<br>
+						Space<br>
+						Disaster<br>
+						Roleplaying<br>
+						Videogame
+					</div>
+				</div>
+				<img src="loading_screen.gif" class="scanlines loading-screen-gif" alt="">\
+			</div>"}
 
 		if(!is_guest_key(src.key))
 			dat += playerpolls()

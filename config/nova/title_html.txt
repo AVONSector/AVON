@@ -3,10 +3,17 @@
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 			<style type='text/css'>
+
 				@font-face {
 					font-family: "Fixedsys";
 					src: url("FixedsysExcelsior3.01Regular.ttf");
 				}
+
+                @font-face {
+                    font-family: "nasa";
+                    src: url("nasa.otf");
+                }
+
 				body,
 				html {
 					margin: 0;
@@ -42,7 +49,9 @@
 					box-sizing: border-box;
 					padding: 3vmin 2vmin;
 					top: 0%;
-					left:0%;
+					/* left shifted from 50% -> see PANEL LAYOUT below */
+					left: calc(50% + var(--panels-width, 0px) / 2);
+					transform: translateX(-50%);
 					z-index: 1;
 				}
 
@@ -52,7 +61,8 @@
 					text-decoration: none;
 					width: 100%;
 					text-align: right;
-					color:green;
+					color:white;
+                    font-family: "nasa";
 					text-shadow: 1px 1px black;
 					margin-right: 0%;
 					margin-top: 0px;
@@ -68,8 +78,8 @@
 					left: 2vmin;
 					height: 4vmin;
 					width: calc(100% - 4vmin);
-					border-left: 2px solid green;
-					border-right: 2px solid green;
+					border-left: 2px solid white;
+					border-right: 2px solid white;
 					padding: 4px;
 					background-color: black;
 				}
@@ -77,7 +87,7 @@
 				.progress_bar {
 					width: 0%;
 					height: 100%;
-					background-color: green;
+					background-color: white;
 				}
 
 				@keyframes looping_sub_pattern {
@@ -93,11 +103,11 @@
 					width: 0%;
 					height: 100%;
 					float: right;
-					background-color: lime;
+					background-color: white;
 					background-image: repeating-linear-gradient(
 						-45deg,
-						green,
-						green 7px,
+						white,
+						white 7px,
 						black 7px,
 						black 8px
 					);
@@ -111,7 +121,8 @@
 					width: 90vmin;
 					min-height: 10vmin;
 					top: calc(50% + 22.5vmin);
-					left:50%;
+					/* left shifted from 50% -> see PANEL LAYOUT below */
+					left: calc(50% + var(--panels-width, 0px) / 2);
 					transform: translate(-50%, -50%);
 					z-index: 1;
 					border: 2px solid white;
@@ -132,10 +143,10 @@
 				.menu_button {
 					display: block;
 					box-sizing: border-box;
-					font-family: "Fixedsys";
+					font-family: "nasa";
 					font-weight: lighter;
 					text-decoration: none;
-					font-size: 4vmin;
+					font-size: 2vmin;
 					text-shadow: 2px 2px black;
 					line-height: 4vmin;
 					width: 100%;
@@ -160,8 +171,9 @@
 				}
 
 				.menu_button:hover::before {
-					content: "☞";
+					content: ">";
 					text-align: center;
+					font-weight: bold;
 					width: 5vmin;
 					display: inline-block;
 				}
@@ -172,8 +184,9 @@
 				}
 
 				.menu_button:active::before {
-					content: "☛";
+					content: ">";
 					text-align: center;
+					font-weight: bold;
 					width: 5vmin;
 					animation: pulse_button 0.25s infinite alternate;
 				}
@@ -215,7 +228,8 @@
 					width: auto;
 					padding-top: 1vmin;
 					top: calc(50% - 10vmin);
-					left:50%;
+					/* left shifted from 50% -> see PANEL LAYOUT below */
+					left: calc(50% + var(--panels-width, 0px) / 2);
 					transform: translate(-50%, -50%);
 					z-index: 1;
 				}
@@ -242,6 +256,130 @@
 				.checked {
 					color: #4F4;
 				}
+
+				:root{
+					--ink: #f5f3ee;
+					--panel-bg: #050505;
+					--panels-width: 0px; /* set at runtime by JS below */
+				}
+
+				.panels{
+					position: fixed;
+					top: 0;
+					left: 0;
+					height: 100vh;
+					width: 100vw;
+					display: flex;
+					font-family: 'nasa';
+				}
+
+				.panel-wordmark{
+					flex: 0 0 auto;
+					background: var(--panel-bg);
+					display: flex;
+					align-items: flex-end;
+					justify-content: center;
+					padding: 0 22px 40px;
+				}
+
+				.wordmark{
+					writing-mode: vertical-rl;
+					transform: rotate(180deg);
+					color: var(--ink);
+					font-weight: 700;
+					font-size: 96px;
+					letter-spacing: 6px;
+					line-height: 1;
+					text-transform: uppercase;
+				}
+
+                .wordmark-top{
+		position: absolute;
+   			top: 0;
+    			left: 0;
+    			right: 0;
+                    color: var(--ink);
+                    font-weight: 700;
+                    font-size: 48px;
+                    letter-spacing: 6px;
+                    line-height: 1;
+                    text-transform: uppercase;
+                    text-align: left;
+                    margin-bottom: 16px;
+                    writing-mode: vertical-rl;
+	            transform: rotate(180deg);
+		    padding: 25px;
+                }
+
+				.panel-tags{
+					position: relative;   /* add this */
+					flex: 0 0 190px;
+					background: var(--panel-bg);
+					margin-left: 2px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: flex-end;
+					gap: 28px;
+					padding: 0 18px 40px;
+				}
+
+				.cat-glyph{
+					width: 92px;
+					height: 92px;
+				}
+
+				.tags{
+					color: var(--ink);
+					font-weight: 600;
+					font-size: 15px;
+					letter-spacing: 1.5px;
+					text-transform: uppercase;
+					text-align: center;
+					line-height: 1.65;
+				}
+.scanlines {
+    -webkit-mask-image: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 0px,
+        rgba(0, 0, 0, 1) 2px,
+        rgba(0, 0, 0, 0.55) 3px,
+        rgba(0, 0, 0, 0.55) 4px
+    );
+    mask-image: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 0px,
+        rgba(0, 0, 0, 1) 2px,
+        rgba(0, 0, 0, 0.55) 3px,
+        rgba(0, 0, 0, 0.55) 4px
+    );
+    -webkit-mask-size: 100% 4px;
+    mask-size: 100% 4px;
+    animation: scanline_drift 1s linear infinite;
+}
+
+@keyframes scanline_drift {
+    from {
+        -webkit-mask-position: 0px 0px;
+        mask-position: 0px 0px;
+    }
+    to {
+        -webkit-mask-position: 0px 4px;
+        mask-position: 0px 4px;
+    }
+}
+
+.panels > img,
+.loading-screen-gif {
+    flex: 1 1 auto;
+    min-width: 0;   /* prevents flex item from refusing to shrink below intrinsic image width */
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
 			</style>
 		</head>
 		<body>

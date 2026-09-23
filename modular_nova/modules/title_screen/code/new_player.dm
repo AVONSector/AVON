@@ -127,11 +127,13 @@
 	var/dat = get_title_html()
 
 	src << browse(SStitle.current_title_screen, "file=loading_screen.gif;display=0")
+	src << browse('html/browser/avon_kitty.png', "file=avon_kitty.png;display=0") // test line
 	src << browse(dat, "window=nova_title_browser")
 
 /datum/asset/simple/lobby
 	assets = list(
 		"FixedsysExcelsior3.01Regular.ttf" = 'html/browser/FixedsysExcelsior3.01Regular.ttf',
+		"nasa.otf" = 'html/browser/nasa.otf',
 	)
 
 /**
