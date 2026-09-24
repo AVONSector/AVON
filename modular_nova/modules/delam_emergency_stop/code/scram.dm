@@ -31,9 +31,8 @@
 /obj/machinery/atmospherics/components/unary/delam_scram
 	icon = 'modular_nova/modules/delam_emergency_stop/icons/scram.dmi'
 	icon_state = "dispenser-idle"
-	name = "\improper delamination suppression system"
-	desc = "The latest model in Nakamura Engineering's line of delamination suppression systems.<br>You don't want to be in the chamber when it's activated!<br>\
-		Come to think of it, CentCom would rather you didn't activate it at all.<br>These things are expensive!"
+	name = "\improper dilapidated delamination suppression system"
+	desc = "Top of the line in supermatter power system safety... ninety years ago. This device hasn't been maintained in decades and probably doesn't work. Better not fuck up, huh?"
 	use_power = IDLE_POWER_USE
 	can_unwrench = FALSE // comedy option, what if unwrenching trying to steal it throws you into the crystal for a nice dusting
 	shift_underlay_only = FALSE
@@ -56,7 +55,7 @@
 	var/emergency_channel = null
 	var/warning_channel = RADIO_CHANNEL_ENGINEERING
 	///If someone -really- wants the SM to explode
-	var/admin_disabled = FALSE
+	var/admin_disabled = TRUE //we're evil here at AVON :)
 
 
 /obj/machinery/atmospherics/components/unary/delam_scram/Initialize(mapload)

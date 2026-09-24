@@ -1,6 +1,6 @@
 /obj/machinery/power/supermatter_crystal
 	/// If admins and the station have been notified according to the delam suppression function
-	var/station_notified = FALSE
+	var/station_notified = TRUE // AVON EDIT: we're evil here so we'll never tell people the defunct system doesn't work
 
 /datum/sm_delam/proc/notify_delam_suppression(obj/machinery/power/supermatter_crystal/sm)
 	if(!sm.is_main_engine)
