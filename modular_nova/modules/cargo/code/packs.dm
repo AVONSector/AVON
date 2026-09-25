@@ -313,7 +313,7 @@
 	crate_name = "gas miner delivery beacon crate"
 	crate_type = /obj/structure/closet/crate/secure/engineering
 
-/datum/supply_pack/engineering/improved_rcd
+/* /datum/supply_pack/engineering/improved_rcd AVON EDIT - less RCDs
 	name = "Improved RCD Crate"
 	desc = "Contains 3 upgraded RCDs featuring superior material storage. Each comes with complimentary frames and circuitry upgrades to boot!"
 	access = ACCESS_ENGINE_EQUIP
@@ -324,7 +324,7 @@
 		/obj/item/construction/rcd/improved,
 	)
 	crate_name = "improved RCD crate"
-	crate_type = /obj/structure/closet/crate/secure/engineering
+	crate_type = /obj/structure/closet/crate/secure/engineering */
 
 /datum/supply_pack/engine/reactor_fuel
 	name = "Preloaded RBMK2 reactor rod"
