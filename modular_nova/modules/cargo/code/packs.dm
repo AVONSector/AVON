@@ -141,7 +141,7 @@
 	contains = list(/obj/item/defibrillator/compact)
 	crate_name = "compact defibrillator crate"
 
-/datum/supply_pack/medical/medigun
+/*/datum/supply_pack/medical/medigun - medigun removal AVON EDIT
 	name = "CWM-479 Medigun"
 	desc = "Contains a single Vey-Medical CWM-479 model medigun; medicells not included."
 	cost = CARGO_CRATE_VALUE * 30
@@ -159,7 +159,7 @@
 		/obj/item/weaponcell/medical/burn,
 		/obj/item/weaponcell/medical/toxin,
 	)
-	crate_name = "medicell replacement crate"
+	crate_name = "medicell replacement crate" */ // AVON EDIT END
 
 /*
 *	SECURITY
@@ -464,7 +464,7 @@
 		/obj/item/reagent_containers/cup/bottle/capsaicin,
 	)
 	crate_name = "fiesta crate"
-	
+
 /datum/supply_pack/organic/ration
 	name = "Emergency Rations Box"
 	desc = "Is the station starving because there isn't a chef? Are the lizardpeople among the crew puking up the pizza? This box contains 8 surplus emergency rations, designed to be nutritious, filling, and to be edible across a wide range of crew species. \

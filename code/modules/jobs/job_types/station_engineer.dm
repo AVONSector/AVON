@@ -66,7 +66,7 @@
 	messenger = /obj/item/storage/backpack/messenger/eng
 
 	backpack_contents = list(
-		/obj/item/construction/rcd/loaded,
+		// /obj/item/construction/rcd/loaded, AVON EDIT - no RCD start
 	)
 
 	box = /obj/item/storage/box/survival/engineer
