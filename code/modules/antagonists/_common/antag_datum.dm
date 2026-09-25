@@ -352,7 +352,6 @@ GLOBAL_LIST_EMPTY(antagonists)
 /datum/antagonist/proc/greet()
 	if(!silent)
 		to_chat(owner.current, span_big("You are \the [src]."))
-		to_chat(owner.current, span_infoplain(span_doyourjobidiot("Remember that being an antagonist does not exclude you from the server rules regarding RP standards."))) // NOVA EDIT ADDITION - RP REMINDER
 		play_stinger()
 
 /// Plays the antag stinger sound, if we have one
