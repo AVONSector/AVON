@@ -141,7 +141,7 @@
 	contains = list(/obj/item/defibrillator/compact)
 	crate_name = "compact defibrillator crate"
 
-/datum/supply_pack/medical/medigun
+/*/datum/supply_pack/medical/medigun - medigun removal AVON EDIT
 	name = "CWM-479 Medigun"
 	desc = "Contains a single Vey-Medical CWM-479 model medigun; medicells not included."
 	cost = CARGO_CRATE_VALUE * 30
@@ -159,7 +159,7 @@
 		/obj/item/weaponcell/medical/burn,
 		/obj/item/weaponcell/medical/toxin,
 	)
-	crate_name = "medicell replacement crate"
+	crate_name = "medicell replacement crate" */ // AVON EDIT END
 
 /*
 *	SECURITY
@@ -313,7 +313,7 @@
 	crate_name = "gas miner delivery beacon crate"
 	crate_type = /obj/structure/closet/crate/secure/engineering
 
-/datum/supply_pack/engineering/improved_rcd
+/* /datum/supply_pack/engineering/improved_rcd AVON EDIT - less RCDs
 	name = "Improved RCD Crate"
 	desc = "Contains 3 upgraded RCDs featuring superior material storage. Each comes with complimentary frames and circuitry upgrades to boot!"
 	access = ACCESS_ENGINE_EQUIP
@@ -324,7 +324,7 @@
 		/obj/item/construction/rcd/improved,
 	)
 	crate_name = "improved RCD crate"
-	crate_type = /obj/structure/closet/crate/secure/engineering
+	crate_type = /obj/structure/closet/crate/secure/engineering */
 
 /datum/supply_pack/engine/reactor_fuel
 	name = "Preloaded RBMK2 reactor rod"
@@ -464,7 +464,7 @@
 		/obj/item/reagent_containers/cup/bottle/capsaicin,
 	)
 	crate_name = "fiesta crate"
-	
+
 /datum/supply_pack/organic/ration
 	name = "Emergency Rations Box"
 	desc = "Is the station starving because there isn't a chef? Are the lizardpeople among the crew puking up the pizza? This box contains 8 surplus emergency rations, designed to be nutritious, filling, and to be edible across a wide range of crew species. \

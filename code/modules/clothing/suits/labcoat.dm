@@ -29,7 +29,6 @@
 		/obj/item/storage/pill_bottle,
 		/obj/item/tank/internals/emergency_oxygen,
 		/obj/item/tank/internals/plasmaman,
-		/obj/item/gun/energy/cell_loaded/medigun, //NOVA EDIT ADDITION - MEDIGUNS
 		/obj/item/storage/medkit, //NOVA EDIT ADDITION
 	)
 	armor_type = /datum/armor/toggle_labcoat
@@ -54,7 +53,6 @@
 	. = ..()
 	allowed += list(
 		/obj/item/melee/baton/telescopic,
-		/obj/item/gun/energy/cell_loaded/medigun, //NOVA EDIT ADDITION - MEDIGUNS
 		/obj/item/storage/medkit, //NOVA EDIT ADDITION
 	)
 
