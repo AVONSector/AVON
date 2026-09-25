@@ -345,12 +345,6 @@
 			info += span_bolddanger("This job can be sacrificed by heretics.")
 		if (contractable)
 			info += span_bolddanger("This job can be targeted by contractors.")
-	//NOVA EDIT ADDITION END
-	//NOVA EDIT ADDITION START - ALTERNATIVE_JOB_TITLES
-	if(alt_title != title)
-		info += span_warning("Remember that alternate titles are purely for flavor and roleplay.")
-		info += span_doyourjobidiot("Do not use your \"[alt_title]\" alt title as an excuse to forego your duties as a [title].")
-	//NOVA EDIT END
 	return info
 /// Returns information pertaining to this job's radio.
 /datum/job/proc/get_radio_information()
